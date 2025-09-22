@@ -34,4 +34,10 @@
             }
         }
     }
+    @include breakpoint(tablet) {
+    .footer_container {
+        margin-top: 100px;        
+    }
 }
+}
+

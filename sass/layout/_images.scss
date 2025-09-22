@@ -1,5 +1,16 @@
-.images {
+.images_01 {
     margin-top: 15px;
+    margin-bottom: 10px;
+    img {
+        display: block;
+        margin: auto;
+        max-width: 90%;
+        margin-top: 25px;
+    }
+}
+
+.images_02 {
+    margin-top: 10px;
     margin-bottom: 15px;
     img {
         display: block;
@@ -8,3 +19,14 @@
         margin-top: 25px;
     }
 }
+
+@include breakpoint(tablet) {
+        .images_01 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        .images_02 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+    }

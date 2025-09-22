@@ -26,4 +26,13 @@
         padding-bottom: 55px;
         line-height: 35px;
     }
+    
 }
+
+@include breakpoint(tablet) {
+        .img_article {
+                margin: 0;
+                padding-top: 45px;
+                max-width: 100%;
+            }
+    }

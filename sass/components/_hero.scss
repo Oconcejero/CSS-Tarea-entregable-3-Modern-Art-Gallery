@@ -1,4 +1,17 @@
 .hero_header {
+
+    .header_mobile {
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+    .header_tablet {
+        display: none;
+        @include breakpoint(tablet) {
+            display: block;
+        }
+    }
+    
     img {
         max-width: 100%;
     }
