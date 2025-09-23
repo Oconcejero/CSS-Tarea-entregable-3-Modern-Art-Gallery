@@ -33,11 +33,39 @@
                 width: 20px;
             }
         }
+        @include breakpoint(desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 100px;
+        margin-right: 100px;
+        .footer_title h3 {
+            font-size: 35px;
+            line-height: 35px;
+        }
+        .footer_subtitle {
+            max-width: 34%;
+            p {
+                font-size: 14px;
+                margin-top: 0;
+                margin-right: 30px;
+            }
+        }
+        .social {
+            padding-top: 0;
+            margin-bottom: 100px;
+            padding-left: 50px;
+        }
+    }
     }
     @include breakpoint(tablet) {
     .footer_container {
         margin-top: 100px;        
+        }
+   
+    
     }
-}
+
+    
 }
 
