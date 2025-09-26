@@ -69,11 +69,24 @@
             @include breakpoint(desktop) {
             display: none;
             }
+            @include breakpoint(tablet) {
+                display: none;
+            }
         }
         .img_001_destok {
             display: none;
             @include breakpoint(desktop) {
             display: block;
+            }
+            
+        }
+        .img_001_tablet {
+            display: none;
+            @include breakpoint(tablet) {
+                display: block;
+            }
+            @include breakpoint(desktop) {
+            display: none;
             }
         }
         padding-top: 150px;
@@ -113,7 +126,7 @@
                     margin: 0;
                     padding: 0;
                     display: flex;
-                    width: 60%;
+                    width: 150%;
                     justify-content: flex-end;
                 }           
             }
@@ -123,11 +136,12 @@
             .gallery_text {
                 
             p {
-                max-width: 70%;
+                max-width: 65%;
               }
             h2 {
+                /*No he sabido resolver, por más vueltas que le doy, el usar "white-space" y luego poder quitarlo*/
                 white-space: normal;
-                max-width: 75%;
+                max-width: 70%;
                 }      
             }
 
@@ -140,13 +154,35 @@
 
 .container_003 {
     .images_01 {
+    /*CAMBIO IMÁGENES RESPONSIVE*/
         .img_002_X2_mobile {
+            display: block;
             @include breakpoint(desktop) {
-            display: none;
+                display: none;
+            }
+            @include breakpoint(tablet) {
+                display: none;
             }
         }
-        
-        
+        .img_002_X2_tablet {
+            display: none;
+            @include breakpoint(tablet) {
+                display: block;
+            }
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+        .img_002_X2_desktop {
+            display: none;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(desktop) {
+                display: block;
+            }
+        } 
+
         margin-top: 15px;
         margin-bottom: 10px;
         img {
@@ -155,29 +191,44 @@
             max-width: 90%;
             margin-top: 25px;
         }
-        .img_002_X2_tablet {
-            display: none;
-        }
-        .img_002_X2_desktop {
-            display: none;
-        }
     }
 
     .images_02 {
+     /*CAMBIO IMÁGENES RESPONSIVE*/
+        .img_003_X2_mobile {
+            display: block;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+        .img_003_X2_tablet {
+            display: none;
+            @include breakpoint(tablet) {
+                display: block;
+            }
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+        .img_003_X2_desktop {
+            display: none;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(desktop) {
+                display: block;
+            }
+        }
+
         margin-top: 10px;
         margin-bottom: 15px;
         img {
             display: block;
             margin: auto;
             max-width: 90%;
-            margin-top: 25px;
-        }
-        
-        .img_003_X2_tablet {
-            display: none;
-        }
-        .img_003_X2_desktop {
-            display: none;
         }
     }
     @include breakpoint(tablet) {
@@ -185,8 +236,8 @@
         margin-right: 30px;
         margin-top: 10px;
         display: grid;
-        grid-template-columns: 1.3fr 1fr;
-        gap: 10px;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2%;
         .images_01 {
             margin-top: 0;
             margin-bottom: 0;
@@ -196,12 +247,6 @@
                 padding: 0;
                 max-width: 100%;
             }
-            .img_002_X2_desktop {
-            display: none;
-            @include breakpoint(desktop) {
-            display: block;
-            }
-        }
         }
         .images_02 {
             margin-top: 0;
@@ -211,41 +256,28 @@
                 padding: 0;
                 max-width: 100%;
             }
-        }   
-        
-        .img_002_X2_tablet {
-        display: block;
-        }
-        .img_003_X2_tablet {
-        display: block;
-        }
-        .img_002_X2_mobile {
-        display: none;
-        }
-        .img_003_X2_mobile {
-        display: none;
-        }
-        
-        
+        }      
     }
     @include breakpoint(desktop) {
         margin-left: 100px;
         margin-right: 100px;
-        .img_003_X2_desktop {
-        display: block;
-        }
-        .img_002_X2_tablet {
-        display: none;
-        }
-        .img_003_X2_tablet {
-        display: none;
-        }
-        .img_002_X2_mobile {
-        display: none;
-        }
-        .img_003_X2_mobile {
-        display: none;
-        }
+        margin-top: 35px;
+        .img_article {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 65px;
+                h2 {
+                    font-size: 150px;
+                    max-width: 80%;
+                    line-height: 95px;
+                }
+                p {
+                    font-size: 25px;
+                    max-width: 80%;
+                    line-height: 35px;
+                    margin-bottom: 0;
+                }
+            }
     }
     .img_article {
     display: block;
@@ -278,24 +310,22 @@
 @include breakpoint(tablet) {
         .img_article {
                 margin: 0;
-                padding-top: 45px;
                 max-width: 100%;
-            }
-    }
-@include breakpoint(desktop) {
-        .img_article {
-                padding-top: 90px;
-                max-width: 100%;
-                padding-left: 35px;
+                padding-top: 40px;
+                padding-bottom: 35px;
+                padding-right: 10px;
                 h2 {
                     margin-top: 0px;
-                    max-width: 75%;
-                    line-height: 55px;
+                    font-size: 50px;
+                    padding-top: 30%; 
                 }
                 p {
-                    max-width: 75%;
+                    font-size: 19px;
+                    line-height: 27px;
+                    margin-right: 30px; 
                 }
             }
     }
+
 }
 

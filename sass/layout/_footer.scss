@@ -39,16 +39,20 @@
         align-items: flex-start;
         margin-left: 100px;
         margin-right: 100px;
+        
         .footer_title h3 {
+            width: 50%;
             font-size: 35px;
             line-height: 35px;
+            padding-right: 15px;
         }
         .footer_subtitle {
-            max-width: 34%;
+            max-width: 25%;
             p {
                 font-size: 14px;
                 margin-top: 0;
-                margin-right: 30px;
+                margin-right: 20px;
+                line-height: 25px;
             }
         }
         .social {
@@ -58,9 +62,29 @@
         }
     }
     }
+
+    /*No logro modificar la parte del footer para que se mueva
+    a la izquierda y veo que si modifico el footer_tittle-widht
+    en tablet se me modifica en DESKTOP, cosa que entiendo
+    no debería. */
+    
     @include breakpoint(tablet) {
     .footer_container {
-        margin-top: 100px;        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 100px;
+        gap: 75px;
+        p {
+            margin-top: 0;
+            max-width: 85%;
+        }
+        .footer_title {
+            width: 50%;
+        }
+        .social {
+            padding-top: 0;
+        }
         }
    
     

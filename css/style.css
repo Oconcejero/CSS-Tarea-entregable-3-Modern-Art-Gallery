@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESPONSIVE */
 /* COLORS */
 /*responsive*/
@@ -77,7 +78,7 @@
 .hero_header .button:hover img {
   display: inline-block;
   padding: 25px 25px;
-  background-color: #151515;
+  background-color: black;
 }
 
 .footer {
@@ -125,16 +126,19 @@
     margin-right: 100px;
   }
   .footer .footer_container .footer_title h3 {
+    width: 50%;
     font-size: 35px;
     line-height: 35px;
+    padding-right: 15px;
   }
   .footer .footer_container .footer_subtitle {
-    max-width: 34%;
+    max-width: 25%;
   }
   .footer .footer_container .footer_subtitle p {
     font-size: 14px;
     margin-top: 0;
-    margin-right: 30px;
+    margin-right: 20px;
+    line-height: 25px;
   }
   .footer .footer_container .social {
     padding-top: 0;
@@ -142,9 +146,29 @@
     padding-left: 50px;
   }
 }
+.footer {
+  /*No logro modificar la parte del footer para que se mueva
+  a la izquierda y veo que si modifico el footer_tittle-widht
+  en tablet se me modifica en DESKTOP, cosa que entiendo
+  no debería. */
+}
 @media (min-width: 768px) {
   .footer .footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-top: 100px;
+    gap: 75px;
+  }
+  .footer .footer_container p {
+    margin-top: 0;
+    max-width: 85%;
+  }
+  .footer .footer_container .footer_title {
+    width: 50%;
+  }
+  .footer .footer_container .social {
+    padding-top: 0;
   }
 }
 
@@ -215,12 +239,30 @@
     display: none;
   }
 }
+@media (min-width: 768px) {
+  .container_002 .gallery .img_001_mobile {
+    display: none;
+  }
+}
 .container_002 .gallery .img_001_destok {
   display: none;
 }
 @media (min-width: 1200px) {
   .container_002 .gallery .img_001_destok {
     display: block;
+  }
+}
+.container_002 .gallery .img_001_tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container_002 .gallery .img_001_tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .container_002 .gallery .img_001_tablet {
+    display: none;
   }
 }
 .container_002 .gallery {
@@ -262,7 +304,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: 60%;
+    width: 150%;
     justify-content: flex-end;
   }
 }
@@ -272,17 +314,55 @@
     margin-left: 100px;
   }
   .container_002 .gallery .gallery_text p {
-    max-width: 70%;
+    max-width: 65%;
   }
   .container_002 .gallery .gallery_text h2 {
+    /*No he sabido resolver, por más vueltas que le doy, el usar "white-space" y luego poder quitarlo*/
     white-space: normal;
-    max-width: 75%;
+    max-width: 70%;
   }
 }
 
+.container_003 .images_01 {
+  /*CAMBIO IMÁGENES RESPONSIVE*/
+}
+.container_003 .images_01 .img_002_X2_mobile {
+  display: block;
+}
 @media (min-width: 1200px) {
   .container_003 .images_01 .img_002_X2_mobile {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .container_003 .images_01 .img_002_X2_mobile {
+    display: none;
+  }
+}
+.container_003 .images_01 .img_002_X2_tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container_003 .images_01 .img_002_X2_tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .container_003 .images_01 .img_002_X2_tablet {
+    display: none;
+  }
+}
+.container_003 .images_01 .img_002_X2_desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container_003 .images_01 .img_002_X2_desktop {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container_003 .images_01 .img_002_X2_desktop {
+    display: block;
   }
 }
 .container_003 .images_01 {
@@ -295,11 +375,47 @@
   max-width: 90%;
   margin-top: 25px;
 }
-.container_003 .images_01 .img_002_X2_tablet {
+.container_003 .images_02 {
+  /*CAMBIO IMÁGENES RESPONSIVE*/
+}
+.container_003 .images_02 .img_003_X2_mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .container_003 .images_02 .img_003_X2_mobile {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container_003 .images_02 .img_003_X2_mobile {
+    display: none;
+  }
+}
+.container_003 .images_02 .img_003_X2_tablet {
   display: none;
 }
-.container_003 .images_01 .img_002_X2_desktop {
+@media (min-width: 768px) {
+  .container_003 .images_02 .img_003_X2_tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .container_003 .images_02 .img_003_X2_tablet {
+    display: none;
+  }
+}
+.container_003 .images_02 .img_003_X2_desktop {
   display: none;
+}
+@media (min-width: 768px) {
+  .container_003 .images_02 .img_003_X2_desktop {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container_003 .images_02 .img_003_X2_desktop {
+    display: block;
+  }
 }
 .container_003 .images_02 {
   margin-top: 10px;
@@ -309,13 +425,6 @@
   display: block;
   margin: auto;
   max-width: 90%;
-  margin-top: 25px;
-}
-.container_003 .images_02 .img_003_X2_tablet {
-  display: none;
-}
-.container_003 .images_02 .img_003_X2_desktop {
-  display: none;
 }
 @media (min-width: 768px) {
   .container_003 {
@@ -323,8 +432,8 @@
     margin-right: 30px;
     margin-top: 10px;
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2%;
   }
   .container_003 .images_01 {
     margin-top: 0;
@@ -336,16 +445,6 @@
     padding: 0;
     max-width: 100%;
   }
-  .container_003 .images_01 .img_002_X2_desktop {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (min-width: 1200px) {
-  .container_003 .images_01 .img_002_X2_desktop {
-    display: block;
-  }
-}
-@media (min-width: 768px) {
   .container_003 .images_02 {
     margin-top: 0;
     margin-bottom: 0;
@@ -355,38 +454,28 @@
     padding: 0;
     max-width: 100%;
   }
-  .container_003 .img_002_X2_tablet {
-    display: block;
-  }
-  .container_003 .img_003_X2_tablet {
-    display: block;
-  }
-  .container_003 .img_002_X2_mobile {
-    display: none;
-  }
-  .container_003 .img_003_X2_mobile {
-    display: none;
-  }
 }
 @media (min-width: 1200px) {
   .container_003 {
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 35px;
   }
-  .container_003 .img_003_X2_desktop {
-    display: block;
+  .container_003 .img_article {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 65px;
   }
-  .container_003 .img_002_X2_tablet {
-    display: none;
+  .container_003 .img_article h2 {
+    font-size: 150px;
+    max-width: 80%;
+    line-height: 95px;
   }
-  .container_003 .img_003_X2_tablet {
-    display: none;
-  }
-  .container_003 .img_002_X2_mobile {
-    display: none;
-  }
-  .container_003 .img_003_X2_mobile {
-    display: none;
+  .container_003 .img_article p {
+    font-size: 25px;
+    max-width: 80%;
+    line-height: 35px;
+    margin-bottom: 0;
   }
 }
 .container_003 .img_article {
@@ -420,23 +509,264 @@
 @media (min-width: 768px) {
   .container_003 .img_article {
     margin: 0;
-    padding-top: 45px;
     max-width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .container_003 .img_article {
-    padding-top: 90px;
-    max-width: 100%;
-    padding-left: 35px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    padding-right: 10px;
   }
   .container_003 .img_article h2 {
     margin-top: 0px;
-    max-width: 75%;
-    line-height: 55px;
+    font-size: 50px;
+    padding-top: 30%;
   }
   .container_003 .img_article p {
-    max-width: 75%;
+    font-size: 19px;
+    line-height: 27px;
+    margin-right: 30px;
+  }
+}
+
+.container_mobile {
+  max-width: 100%;
+}
+.container_mobile .sec_001 {
+  max-width: 100%;
+}
+.container_mobile .sec_001 .button {
+  display: flex;
+  position: absolute;
+}
+.container_mobile .sec_001 .button a {
+  display: inline-block;
+  background-color: #151515;
+  color: white;
+  padding: 25px 45px;
+  font-family: "Big Shoulders", sans-serif;
+  letter-spacing: 5px;
+  font-size: 24px;
+  text-decoration: none;
+}
+.container_mobile .sec_001 .button img {
+  display: inline-block;
+  padding: 25px 25px;
+  background-color: #D5966C;
+}
+.container_mobile .sec_001 .button:hover {
+  display: flex;
+}
+.container_mobile .sec_001 .button:hover a {
+  display: inline-block;
+  background-color: #D5966C;
+  color: white;
+  padding: 25px 45px;
+  font-family: "Big Shoulders", sans-serif;
+  letter-spacing: 5px;
+  font-size: 24px;
+  text-decoration: none;
+}
+.container_mobile .sec_001 .button:hover img {
+  display: inline-block;
+  padding: 25px 25px;
+  background-color: black;
+}
+.container_mobile .sec_001 .mapa_mobile {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  /*Hay una raya inferior que no entiendo como quitarla o de donde sale */
+}
+.container_mobile .sec_001 .marc_map {
+  position: absolute;
+  top: 265px;
+  left: 172px;
+}
+.container_mobile .sec_001 .mapa_desktop {
+  display: none;
+}
+.container_mobile .sec_001 .mapa_tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container_mobile .sec_001 .mapa_mobile {
+    display: none;
+  }
+  .container_mobile .sec_001 .mapa_tablet {
+    display: block;
+  }
+  .container_mobile .sec_001 .mapa_desktop {
+    display: none;
+  }
+  .container_mobile .sec_001 .button {
+    margin-left: 50px;
+  }
+  .container_mobile .sec_001 img.mapa_tablet {
+    width: 100%;
+    position: relative;
+    right: 0px;
+    z-index: -1;
+  }
+  .container_mobile .sec_001 .marc_map {
+    position: absolute;
+    top: 279px;
+    left: 376px;
+  }
+}
+@media (min-width: 1200px) {
+  .container_mobile .sec_001 .mapa_mobile {
+    display: none;
+  }
+  .container_mobile .sec_001 .mapa_tablet {
+    display: none;
+  }
+  .container_mobile .sec_001 .mapa_desktop {
+    display: block;
+  }
+  .container_mobile .sec_001 .mapa_desktop {
+    display: block;
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  .container_mobile .sec_001 .button {
+    margin-left: 150px;
+  }
+  .container_mobile .sec_001 .marc_map {
+    position: absolute;
+    top: 264px;
+    left: 684px;
+  }
+}
+.container_mobile .sec_002 {
+  background-color: #151515;
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container_mobile .sec_002 .text_01 {
+  font-family: "Big Shoulders", sans-serif;
+  color: white;
+  font-size: 40px;
+}
+.container_mobile .sec_002 .text_02 {
+  font-family: "Big Shoulders", sans-serif;
+  color: #D5966C;
+  font-size: 35px;
+  margin-top: 40px;
+}
+.container_mobile .sec_002 .text_03 {
+  font-family: "Outfit", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 30px;
+}
+.container_mobile .sec_002 .text_03 .description {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .container_mobile .sec_002 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    padding-top: 80px;
+  }
+  .container_mobile .sec_002 .text_01 {
+    margin-right: 125px;
+    line-height: 75px;
+  }
+  .container_mobile .sec_002 .text_02 {
+    margin-top: 0;
+  }
+  .container_mobile .sec_002 .description {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .container_mobile .sec_002 .text_01 {
+    max-width: 40%;
+    padding-left: 150px;
+    padding-right: 500px;
+  }
+  .container_mobile .sec_002 .text_descripton {
+    padding-right: 50px;
+  }
+}
+.container_mobile .sec_003 {
+  background-color: #D5966C;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container_mobile .sec_003 h3 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 30px;
+  color: black;
+}
+.container_mobile .sec_003 p {
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 200;
+  margin-top: 30px;
+  line-height: 30px;
+  color: black;
+}
+.container_mobile .sec_003 .icons {
+  padding-top: 45px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+.container_mobile .sec_003 .icons img {
+  width: 25px;
+}
+@media (min-width: 768px) {
+  .container_mobile .sec_003 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .container_mobile .sec_003 .text_01 {
+    padding-right: 20px;
+  }
+  .container_mobile .sec_003 .text_01 h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .container_mobile .sec_003 .text_02 p {
+    margin-top: 0;
+  }
+  .container_mobile .sec_003 .text_02 {
+    width: 300px;
+  }
+  .container_mobile .sec_003 .icons {
+    padding-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container_mobile .sec_003 {
+    justify-content: space-between;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 50px;
+  }
+  .container_mobile .sec_003 .text_01 h3 {
+    line-height: 20px;
+  }
+  .container_mobile .sec_003 .text_02 {
+    width: 400px;
+  }
+  .container_mobile .sec_003 .text_02 p {
+    max-width: 100%;
   }
 }
 
