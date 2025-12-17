@@ -12,4 +12,4 @@ Proyecto realizado exclusivamente con HTML, CSS y SASS para la colocación de el
 Puedes ver los ejercicios funcionando aquí: <br>
 🔗 [https://github.com/Oconcejero/HTML-CSS-MODERN-ART-GALLERY/](https://oconcejero.github.io/HTML-CSS-MODERN-ART-GALLERY/)
 
-Puedes ver una vista previa en vivo del encabezado ![Web Spa](img/MODERN_ART_GALLERY.png)
+Puedes ver una vista previa en vivo de la página. ![Web Spa](img/MODERN_ART_GALLERY.png)
